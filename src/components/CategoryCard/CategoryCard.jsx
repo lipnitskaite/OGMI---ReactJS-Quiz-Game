@@ -13,9 +13,6 @@ function CategoryCard() {
         src={harryPotterImage}
         alt="Harry Potter Book"
       />
-      <button className={Style.button} type="button">
-        View
-      </button>
     </li>
   );
 }
