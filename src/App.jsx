@@ -1,13 +1,12 @@
 import React from 'react';
 
 import Style from './App.module.scss';
+import StartingPage from './components/StartingPage/StartingPage';
 
 function App() {
   return (
     <div className={Style.app}>
-      <header className={Style.Appheader}>
-        <p1>Initial project</p1>
-      </header>
+      <StartingPage />
     </div>
   );
 }
