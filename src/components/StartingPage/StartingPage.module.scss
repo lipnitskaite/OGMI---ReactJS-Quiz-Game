@@ -1,3 +1,21 @@
 .startingPage {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 55px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 20px;
 }
