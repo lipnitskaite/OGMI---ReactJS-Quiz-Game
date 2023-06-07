@@ -4,7 +4,7 @@ import Style from './App.module.scss';
 
 function App() {
   return (
-    <div className={Style.App}>
+    <div className={Style.app}>
       <header className={Style.Appheader}>
         <p1>Initial project</p1>
       </header>
