@@ -10,6 +10,13 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': 'error',
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: ['state'],
+      },
+    ],
   },
   plugins: ['prettier'],
 };
