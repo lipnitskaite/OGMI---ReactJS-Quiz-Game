@@ -2,13 +2,14 @@ import React from 'react';
 
 import Style from './StartingPage.module.scss';
 import quizData from '../../utils/data';
+import PageTitle from '../PageTitle/PageTitle';
 import CategoryCard from '../CategoryCard/CategoryCard';
 import DifficultyButton from './DifficultyButton/DifficultyButton';
 
 function StartingPage() {
   return (
     <section className={Style.startingPage}>
-      <h2 className={Style.title}>Let&apos;s play!</h2>
+      <PageTitle titleText="Let's play!" />
       <div>
         <p className={Style.subtitle}>Choose your category</p>
         <ul className={Style.categories}>
