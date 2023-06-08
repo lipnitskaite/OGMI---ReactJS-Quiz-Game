@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setActiveQuestion, setResult } from '../../store/slices/quizSlice';
-import Style from './QuestionPage.module.scss';
+import Style from './QuestionSection.module.scss';
 
-function QuestionPage() {
+function QuestionSection() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
@@ -39,11 +39,11 @@ function QuestionPage() {
   };
 
   return (
-    <section className={Style.questionPage}>
+    <section className={Style.questionSection}>
       <h3 className={Style.title}>{question}</h3>
       <ul className={Style.answers}>
         {choices.map((answer, index) => (
-          <li className={Style.answerContainer}>
+          <li className={Style.listItem} key={answer}>
             <div
               className={`${Style.answer} ${
                 selectedAnswerIndex === index &&
@@ -68,4 +68,4 @@ function QuestionPage() {
   );
 }
 
-export default QuestionPage;
+export default QuestionSection;

@@ -1,4 +1,4 @@
-.startingPage {
+.main {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,10 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+}
+
+.listItem {
+  list-style: none;
 }
 
 .difficultyContainer {
@@ -79,7 +83,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  .startingPage {
+  .main {
     padding: 20px;
     gap: 30px;
     max-width: 576px;

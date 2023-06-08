@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import Style from './App.module.scss';
-import StartingPage from './components/StartingPage/StartingPage';
-import QuestionPage from './components/QuestionPage/QuestionPage';
-import ResultPage from './components/ResultPage/ResultPage';
+import Main from './components/Main/Main';
+import QuestionSection from './components/QuestionSection/QuestionSection';
+import Result from './components/Result/Result';
 
 function App() {
   const selectedCategory = useSelector((state) => state.quiz.selectedCategory);
@@ -16,14 +16,14 @@ function App() {
   return (
     <div className={Style.app}>
       <Routes>
-        <Route path="/" element={<StartingPage />} />
+        <Route path="/" element={<Main />} />
         <Route
           path={`${selectedCategory.name}_${selectedDifficultyLevel.level}`}
-          element={<QuestionPage />}
+          element={<QuestionSection />}
         />
         <Route
           path={`${selectedCategory.name}_${selectedDifficultyLevel.level}/result`}
-          element={<ResultPage />}
+          element={<Result />}
         />
       </Routes>
     </div>

@@ -7,10 +7,10 @@ import {
   setActiveQuestion,
   setResult,
 } from '../../store/slices/quizSlice';
-import Style from './ResultPage.module.scss';
+import Style from './Result.module.scss';
 import PageTitle from '../PageTitle/PageTitle';
 
-function ResultPage() {
+function Result() {
   const dispatch = useDispatch();
   const selectedDifficultyLevel = useSelector(
     (state) => state.quiz.selectedDifficultyLevel
@@ -29,7 +29,7 @@ function ResultPage() {
   };
 
   return (
-    <section className={Style.resultPage}>
+    <section className={Style.result}>
       <PageTitle titleText={resultData.title} />
       <p className={Style.subtitle}>{`Your result is ${resultScore} of 5.`}</p>
       <p className={Style.subtitle}>{resultData.description}</p>
@@ -40,4 +40,4 @@ function ResultPage() {
   );
 }
 
-export default ResultPage;
+export default Result;

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Style from './StartingPage.module.scss';
+import Style from './Main.module.scss';
 import quizData from '../../utils/data';
 import {
   setCategory,
   setSelectedDifficultyLevel,
 } from '../../store/slices/quizSlice';
 import PageTitle from '../PageTitle/PageTitle';
-import CategoryCard from '../CategoryCard/CategoryCard';
+import CategoryCard from './CategoryCard/CategoryCard';
 import DifficultyButton from './DifficultyButton/DifficultyButton';
 
-function StartingPage() {
+function Main() {
   const dispatch = useDispatch();
   const selectedCategory = useSelector((state) => state.quiz.selectedCategory);
   const selectedDifficultyLevel = useSelector(
@@ -30,19 +30,21 @@ function StartingPage() {
   };
 
   return (
-    <section className={Style.startingPage}>
+    <section className={Style.main}>
       <PageTitle titleText="Let's play!" />
       <div>
         <p className={Style.subtitle}>Choose your category</p>
         <ul className={Style.categories}>
           {quizData.categories.map((category, index) => (
-            <CategoryCard
-              chooseCategory={() => chooseCategory(category, index)}
-              index={index}
-              selectedCategoryIndex={selectedCategoryIndex}
-              categoryName={category.title}
-              categoryImage={category.image}
-            />
+            <li className={Style.listItem} key={category.name}>
+              <CategoryCard
+                chooseCategory={() => chooseCategory(category, index)}
+                index={index}
+                selectedCategoryIndex={selectedCategoryIndex}
+                categoryName={category.title}
+                categoryImage={category.image}
+              />
+            </li>
           ))}
         </ul>
       </div>
@@ -56,14 +58,16 @@ function StartingPage() {
         <ul className={Style.difficulty}>
           {selectedCategory.name !== undefined &&
             selectedCategory.difficulty.map((difficulty, index) => (
-              <DifficultyButton
-                chooseDifficultyLevel={() =>
-                  chooseDifficultyLevel(difficulty, index)
-                }
-                selectedDifficultyIndex={selectedDifficultyIndex}
-                index={index}
-                difficultyLevel={difficulty.title}
-              />
+              <li className={Style.listItem} key={difficulty.level}>
+                <DifficultyButton
+                  chooseDifficultyLevel={() =>
+                    chooseDifficultyLevel(difficulty, index)
+                  }
+                  selectedDifficultyIndex={selectedDifficultyIndex}
+                  index={index}
+                  difficultyLevel={difficulty.title}
+                />
+              </li>
             ))}
         </ul>
       </div>
@@ -79,4 +83,4 @@ function StartingPage() {
   );
 }
 
-export default StartingPage;
+export default Main;
