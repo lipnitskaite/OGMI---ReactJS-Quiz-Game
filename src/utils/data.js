@@ -96,7 +96,7 @@ const quizData = {
             questions: [
               {
                 question: 'What is the name of the Weasley twins?',
-                choices: ['Fred', 'George', 'Percy', 'Charlie'],
+                choices: ['Ron', 'George', 'Percy', 'Charlie'],
                 correctAnswer: 'George',
               },
               {
