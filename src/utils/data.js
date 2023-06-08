@@ -67,17 +67,23 @@ const quizData = {
             ],
             result: [
               {
+                minScore: 0,
+                maxScore: 1,
                 title: 'Muggle Apprentice',
                 description:
                   "Don't worry, you're just starting your journey into the wizarding world. Keep exploring!",
               },
               {
-                type: 'Wizard in Training',
+                minScore: 2,
+                maxScore: 3,
+                title: 'Wizard in Training',
                 description:
                   "Well done! You have a good grasp of the basics. Keep learning and soon you'll be a true wizard!",
               },
               {
-                type: 'Potterhead Novice',
+                minScore: 4,
+                maxScore: 5,
+                title: 'Potterhead Novice',
                 description:
                   'Congratulations, you have a solid understanding of the Harry Potter series. Keep up the magical work!',
               },
@@ -140,17 +146,23 @@ const quizData = {
             ],
             result: [
               {
-                type: 'Magical Apprentice',
+                minScore: 0,
+                maxScore: 1,
+                title: 'Magical Apprentice',
                 description:
                   'Keep delving into the magical world of Harry Potter to enhance your knowledge!',
               },
               {
-                type: 'Wizarding Scholar',
+                minScore: 2,
+                maxScore: 3,
+                title: 'Wizarding Scholar',
                 description:
                   'Well done! Your knowledge of the Harry Potter series is impressive. Keep up the good work!',
               },
               {
-                type: 'Potterhead Enthusiast',
+                minScore: 4,
+                maxScore: 5,
+                title: 'Potterhead Enthusiast',
                 description:
                   'Congratulations, you are a true Harry Potter enthusiast. Your dedication and knowledge are remarkable!',
               },
@@ -218,17 +230,23 @@ const quizData = {
             ],
             result: [
               {
-                type: 'Apprentice Wizard',
+                minScore: 0,
+                maxScore: 1,
+                title: 'Apprentice Wizard',
                 description:
                   'Keep honing your knowledge of the Harry Potter series to reach expert level!',
               },
               {
-                type: 'Master of Spells',
+                minScore: 2,
+                maxScore: 3,
+                title: 'Master of Spells',
                 description:
                   "Well done! Your knowledge of the Harry Potter series is commendable. You're on your way to becoming a true expert!",
               },
               {
-                type: 'Ultimate Potterhead',
+                minScore: 4,
+                maxScore: 5,
+                title: 'Ultimate Potterhead',
                 description:
                   'Congratulations, you are an ultimate Potterhead. Your expertise in the Harry Potter series is unparalleled. Keep spreading the magic!',
               },
@@ -300,16 +318,22 @@ const quizData = {
             ],
             result: [
               {
+                minScore: 0,
+                maxScore: 1,
                 title: 'Hobbit Apprentice',
                 description:
                   'Keep exploring the world of Middle-earth to improve your knowledge!',
               },
               {
+                minScore: 2,
+                maxScore: 3,
                 title: 'Ranger in Training',
                 description:
                   "Well done! You're on your way to becoming a skilled ranger of Middle-earth!",
               },
               {
+                minScore: 4,
+                maxScore: 5,
                 title: 'Middle-earth Novice',
                 description:
                   "Excellent job! You're a true Middle-earth novice with a deep understanding of the series!",
@@ -363,16 +387,22 @@ const quizData = {
             ],
             result: [
               {
+                minScore: 0,
+                maxScore: 1,
                 title: 'Middle-earth Explorer',
                 description:
                   'Keep delving into the world of Middle-earth to uncover more hidden knowledge!',
               },
               {
+                minScore: 2,
+                maxScore: 3,
                 title: 'Ring Bearer Apprentice',
                 description:
                   "Great job! You're on your way to becoming a skilled Ring Bearer!",
               },
               {
+                minScore: 4,
+                maxScore: 5,
                 title: 'Lord of the Rings Expert',
                 description:
                   "Congratulations! You've achieved the highest level of Lord of the Rings knowledge. You are a true expert!",
@@ -432,16 +462,22 @@ const quizData = {
             ],
             result: [
               {
+                minScore: 0,
+                maxScore: 1,
                 title: 'Hobbit Historian',
                 description:
                   'Keep exploring the depths of Middle-earth to uncover more ancient knowledge!',
               },
               {
+                minScore: 2,
+                maxScore: 3,
                 title: 'Lord of the Rings Scholar',
                 description:
                   'Well done! Your mastery of the Lord of the Rings series is impressive!',
               },
               {
+                minScore: 4,
+                maxScore: 5,
                 title: 'Middle-earth Maestro',
                 description:
                   'Congratulations! You are a true Middle-earth Maestro with unmatched knowledge of the series!',
@@ -517,16 +553,22 @@ const quizData = {
             ],
             result: [
               {
+                minScore: 0,
+                maxScore: 1,
                 title: 'Time Lord Apprentice',
                 description:
                   'Keep exploring the adventures of Doctor Who to improve your knowledge!',
               },
               {
+                minScore: 2,
+                maxScore: 3,
                 title: 'Companion in Training',
                 description:
                   "Well done! You're on your way to becoming a skilled companion of the Doctor!",
               },
               {
+                minScore: 4,
+                maxScore: 5,
                 title: 'Doctor Who Enthusiast',
                 description:
                   "Excellent job! You're a true Doctor Who enthusiast with a deep understanding of the series!",
@@ -594,16 +636,22 @@ const quizData = {
             ],
             result: [
               {
+                minScore: 0,
+                maxScore: 1,
                 title: 'Temporal Tourist',
                 description:
                   'Keep exploring the vast universe of Doctor Who to uncover more hidden knowledge!',
               },
               {
+                minScore: 2,
+                maxScore: 3,
                 title: 'Whovian in Training',
                 description:
                   "Great job! You're on your way to becoming a dedicated Whovian!",
               },
               {
+                minScore: 4,
+                maxScore: 5,
                 title: 'Doctor Who Expert',
                 description:
                   "Congratulations! You've achieved the highest level of Doctor Who knowledge. You are a true expert!",
@@ -677,16 +725,22 @@ const quizData = {
             ],
             result: [
               {
+                minScore: 0,
+                maxScore: 1,
                 title: 'Time Vortex Explorer',
                 description:
                   'Keep delving into the adventures of Doctor Who to uncover more hidden knowledge!',
               },
               {
-                title: 'Companion Scholar',
+                minScore: 2,
+                maxScore: 3,
+                itle: 'Companion Scholar',
                 description:
                   'Well done! Your mastery of Doctor Who is impressive!',
               },
               {
+                minScore: 4,
+                maxScore: 5,
                 title: 'Time Lord Extraordinaire',
                 description:
                   'Congratulations! You are a true Time Lord Extraordinaire with unmatched knowledge of Doctor Who!',
