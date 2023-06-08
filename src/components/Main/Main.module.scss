@@ -33,10 +33,14 @@
 }
 
 .difficultyContainer {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s;
 
   &_visible {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
   }
 }
 
@@ -51,7 +55,7 @@
 }
 
 .button {
-  display: none;
+  display: flex;
   box-sizing: border-box;
   border: none;
   width: 100%;
@@ -69,10 +73,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all .3s ease-in;
+  opacity: 0;
+  visibility: hidden;
 
   &_visible {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
   }
 
   &:hover {
