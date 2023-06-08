@@ -18,11 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<StartingPage />} />
         <Route
-          path={`${selectedCategory.name}/${selectedDifficultyLevel.level}`}
+          path={`${selectedCategory.name}_${selectedDifficultyLevel.level}`}
           element={<QuestionPage />}
         />
         <Route
-          path={`${selectedCategory.name}/result`}
+          path={`${selectedCategory.name}_${selectedDifficultyLevel.level}/result`}
           element={<ResultPage />}
         />
       </Routes>

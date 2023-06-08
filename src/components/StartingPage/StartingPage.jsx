@@ -6,6 +6,7 @@ import quizData from '../../utils/data';
 import {
   setCategory,
   setSelectedDifficultyLevel,
+  setActiveQuestion,
 } from '../../store/slices/quizSlice';
 import PageTitle from '../PageTitle/PageTitle';
 import CategoryCard from '../CategoryCard/CategoryCard';
@@ -13,6 +14,7 @@ import DifficultyButton from './DifficultyButton/DifficultyButton';
 
 function StartingPage() {
   const dispatch = useDispatch();
+  dispatch(setActiveQuestion(0));
   const selectedCategory = useSelector((state) => state.quiz.selectedCategory);
   const selectedDifficultyLevel = useSelector(
     (state) => state.quiz.selectedDifficultyLevel
@@ -59,7 +61,7 @@ function StartingPage() {
         </ul>
       </div>
       <Link
-        to={`${selectedCategory.name}/${selectedDifficultyLevel.level}`}
+        to={`${selectedCategory.name}_${selectedDifficultyLevel.level}`}
         className={`${Style.button} ${
           selectedDifficultyLevel.level !== undefined && Style.button_visible
         }`}
