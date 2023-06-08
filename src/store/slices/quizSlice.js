@@ -4,7 +4,6 @@ const initialState = {
   selectedCategory: {},
   selectedDifficultyLevel: {},
   activeQuestion: 0,
-  selectedAnswer: '',
   result: 0,
 };
 
@@ -21,9 +20,6 @@ const quizSlice = createSlice({
     setActiveQuestion: (state, action) => {
       state.activeQuestion = action.payload;
     },
-    setSelectedAnswer: (state, action) => {
-      state.selectedAnswer = action.payload;
-    },
     setResult: (state, action) => {
       state.result = action.payload;
     },
@@ -34,7 +30,6 @@ export const {
   setCategory,
   setSelectedDifficultyLevel,
   setActiveQuestion,
-  setSelectedAnswer,
   setResult,
 } = quizSlice.actions;
 

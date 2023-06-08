@@ -183,9 +183,9 @@ const quizData = {
                 question:
                   'What is the name of the wizard prison in the Harry Potter series?',
                 choices: [
+                  'Gringotts',
                   'Azkaban',
                   'Nurmengard',
-                  'Gringotts',
                   'Ministry of Magic',
                 ],
                 correctAnswer: 'Azkaban',
@@ -193,8 +193,8 @@ const quizData = {
               {
                 question: 'What is the spell used to disarm an opponent?',
                 choices: [
-                  'Expelliarmus',
                   'Stupefy',
+                  'Expelliarmus',
                   'Avada Kedavra',
                   'Imperio',
                 ],
@@ -218,7 +218,7 @@ const quizData = {
               },
               {
                 question:
-                  'Which character betrays the Order of the Phoenix in Harry Potter and the Deathly Hallows?',
+                  'Which character betrays the Order of the Phoenix in Harry Potter and the Prizoner of Azkaban?',
                 choices: [
                   'Severus Snape',
                   'Sirius Black',
@@ -424,7 +424,7 @@ const quizData = {
                 question:
                   'Who is the elf that forms a close bond with Frodo and helps him throughout the journey?',
                 choices: ['Elrond', 'Galadriel', 'Arwen', 'Legolas'],
-                correctAnswer: 'Samwise',
+                correctAnswer: 'Galadriel',
               },
               {
                 question:
