@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Style from './StartingPage.module.scss';
 import quizData from '../../utils/data';
 import {
@@ -57,14 +58,14 @@ function StartingPage() {
             ))}
         </ul>
       </div>
-      <button
+      <Link
+        to={`${selectedCategory.name}/${selectedDifficultyLevel.level}`}
         className={`${Style.button} ${
           selectedDifficultyLevel.level !== undefined && Style.button_visible
         }`}
-        type="button"
       >
         Start
-      </button>
+      </Link>
     </section>
   );
 }
