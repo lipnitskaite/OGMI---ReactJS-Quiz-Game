@@ -3,11 +3,18 @@ import PropTypes from 'prop-types';
 
 import Style from './DifficultyButton.module.scss';
 
-function DifficultyButton({ chooseDifficultyLevel, difficultyLevel }) {
+function DifficultyButton({
+  chooseDifficultyLevel,
+  selectedDifficultyIndex,
+  index,
+  difficultyLevel,
+}) {
   return (
     <li className={Style.buttonContainer}>
       <div
-        className={Style.button}
+        className={`${Style.button} ${
+          selectedDifficultyIndex === index && Style.button_active
+        }`}
         onClick={chooseDifficultyLevel}
         onKeyDown={chooseDifficultyLevel}
         role="button"
@@ -22,6 +29,8 @@ function DifficultyButton({ chooseDifficultyLevel, difficultyLevel }) {
 
 DifficultyButton.propTypes = {
   chooseDifficultyLevel: PropTypes.func.isRequired,
+  selectedDifficultyIndex: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
   difficultyLevel: PropTypes.string.isRequired,
 };
 

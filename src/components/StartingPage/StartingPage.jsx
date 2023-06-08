@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Style from './StartingPage.module.scss';
@@ -6,7 +6,6 @@ import quizData from '../../utils/data';
 import {
   setCategory,
   setSelectedDifficultyLevel,
-  setActiveQuestion,
 } from '../../store/slices/quizSlice';
 import PageTitle from '../PageTitle/PageTitle';
 import CategoryCard from '../CategoryCard/CategoryCard';
@@ -14,17 +13,19 @@ import DifficultyButton from './DifficultyButton/DifficultyButton';
 
 function StartingPage() {
   const dispatch = useDispatch();
-  dispatch(setActiveQuestion(0));
   const selectedCategory = useSelector((state) => state.quiz.selectedCategory);
   const selectedDifficultyLevel = useSelector(
     (state) => state.quiz.selectedDifficultyLevel
   );
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null);
+  const [selectedDifficultyIndex, setSelectedDifficultyIndex] = useState(null);
 
-  const chooseCategory = (category) => {
+  const chooseCategory = (category, index) => {
+    setSelectedCategoryIndex(index);
     dispatch(setCategory(category));
   };
-
-  const chooseDifficultyLevel = (difficulty) => {
+  const chooseDifficultyLevel = (difficulty, index) => {
+    setSelectedDifficultyIndex(index);
     dispatch(setSelectedDifficultyLevel(difficulty));
   };
 
@@ -34,9 +35,11 @@ function StartingPage() {
       <div>
         <p className={Style.subtitle}>Choose your category</p>
         <ul className={Style.categories}>
-          {quizData.categories.map((category) => (
+          {quizData.categories.map((category, index) => (
             <CategoryCard
-              chooseCategory={() => chooseCategory(category)}
+              chooseCategory={() => chooseCategory(category, index)}
+              index={index}
+              selectedCategoryIndex={selectedCategoryIndex}
               categoryName={category.title}
               categoryImage={category.image}
             />
@@ -52,9 +55,13 @@ function StartingPage() {
         <p className={Style.subtitle}>Choose the difficulty level</p>
         <ul className={Style.difficulty}>
           {selectedCategory.name !== undefined &&
-            selectedCategory.difficulty.map((difficulty) => (
+            selectedCategory.difficulty.map((difficulty, index) => (
               <DifficultyButton
-                chooseDifficultyLevel={() => chooseDifficultyLevel(difficulty)}
+                chooseDifficultyLevel={() =>
+                  chooseDifficultyLevel(difficulty, index)
+                }
+                selectedDifficultyIndex={selectedDifficultyIndex}
+                index={index}
                 difficultyLevel={difficulty.title}
               />
             ))}

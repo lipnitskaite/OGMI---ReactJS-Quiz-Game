@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 
 import Style from './CategoryCard.module.scss';
 
-function CategoryCard({ chooseCategory, categoryName, categoryImage }) {
+function CategoryCard({
+  chooseCategory,
+  index,
+  selectedCategoryIndex,
+  categoryName,
+  categoryImage,
+}) {
   return (
     <li className={Style.cardContainer}>
       <div
-        className={Style.card}
+        className={`${Style.card} ${
+          selectedCategoryIndex === index && Style.card_active
+        }`}
         onClick={chooseCategory}
         onKeyDown={chooseCategory}
         role="button"
@@ -23,6 +31,8 @@ function CategoryCard({ chooseCategory, categoryName, categoryImage }) {
 
 CategoryCard.propTypes = {
   chooseCategory: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  selectedCategoryIndex: PropTypes.number.isRequired,
   categoryName: PropTypes.string.isRequired,
   categoryImage: PropTypes.string.isRequired,
 };
