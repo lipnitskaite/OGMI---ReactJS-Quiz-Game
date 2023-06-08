@@ -7,7 +7,8 @@ const quizData = {
         'https://images.unsplash.com/photo-1610466024868-910c6e7e8929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
       difficulty: [
         {
-          level: 'Easy',
+          level: 'easy',
+          title: 'Easy',
           quiz: {
             title: 'Harry Potter Novice',
             description:
@@ -84,7 +85,8 @@ const quizData = {
           },
         },
         {
-          level: 'Medium',
+          level: 'medium',
+          title: 'Medium',
           quiz: {
             title: 'Harry Potter Enthusiast',
             description:
@@ -156,7 +158,8 @@ const quizData = {
           },
         },
         {
-          level: 'Hard',
+          level: 'hard',
+          title: 'Hard',
           quiz: {
             title: 'Harry Potter Expert',
             description:
@@ -241,7 +244,8 @@ const quizData = {
         'https://images.unsplash.com/photo-1624489094663-a51a6c61d492?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2530&q=80',
       difficulty: [
         {
-          level: 'Easy',
+          level: 'easy',
+          title: 'Easy',
           quiz: {
             title: 'Lord of the Rings Novice',
             description:
@@ -314,7 +318,8 @@ const quizData = {
           },
         },
         {
-          level: 'Medium',
+          level: 'medium',
+          title: 'Medium',
           quiz: {
             title: 'Lord of the Rings Enthusiast',
             description:
@@ -376,7 +381,8 @@ const quizData = {
           },
         },
         {
-          level: 'Hard',
+          level: 'hard',
+          title: 'Hard',
           quiz: {
             title: 'Lord of the Rings Master',
             description:
@@ -452,7 +458,8 @@ const quizData = {
         'https://images.unsplash.com/photo-1592085156079-6926b5e08b5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       difficulty: [
         {
-          level: 'Easy',
+          level: 'easy',
+          title: 'Easy',
           quiz: {
             title: 'Doctor Who Novice',
             description:
@@ -528,7 +535,8 @@ const quizData = {
           },
         },
         {
-          level: 'Medium',
+          level: 'medium',
+          title: 'Medium',
           quiz: {
             title: 'Doctor Who Fanatic',
             description:
@@ -604,7 +612,8 @@ const quizData = {
           },
         },
         {
-          level: 'Hard',
+          level: 'hard',
+          title: 'Hard',
           quiz: {
             title: 'Time Lord Master',
             description:

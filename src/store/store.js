@@ -1,10 +1,21 @@
-import { configureStore } from '@reduxjs/toolkit';
-import quizSlice from './slices/quizSlice';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { persistReducer, persistStore } from 'redux-persist';
+import storageSession from 'redux-persist/lib/storage/session';
+import quizReducer from './slices/quizSlice';
 
-const store = configureStore({
-  reducer: {
-    quiz: quizSlice,
-  },
+const rootReducer = combineReducers({
+  quiz: quizReducer,
 });
 
-export default store;
+const persistConfig = {
+  key: 'root',
+  storage: storageSession,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = configureStore({
+  reducer: persistedReducer,
+});
+
+export const persistor = persistStore(store);

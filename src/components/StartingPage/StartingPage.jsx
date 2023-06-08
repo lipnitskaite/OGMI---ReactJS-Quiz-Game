@@ -52,7 +52,7 @@ function StartingPage() {
             selectedCategory.difficulty.map((difficulty) => (
               <DifficultyButton
                 chooseDifficultyLevel={() => chooseDifficultyLevel(difficulty)}
-                difficultyLevel={difficulty.level}
+                difficultyLevel={difficulty.title}
               />
             ))}
         </ul>
