@@ -1,6 +1,7 @@
 const quizData = {
   categories: [
     {
+      name: 'harry_potter',
       title: 'Harry Potter',
       image:
         'https://images.unsplash.com/photo-1610466024868-910c6e7e8929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
@@ -234,6 +235,7 @@ const quizData = {
       ],
     },
     {
+      name: 'lord_of_the_rings',
       title: 'Lord of the Rings',
       image:
         'https://images.unsplash.com/photo-1624489094663-a51a6c61d492?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2530&q=80',
@@ -444,6 +446,7 @@ const quizData = {
       ],
     },
     {
+      name: 'doctor_who',
       title: 'Doctor Who',
       image:
         'https://images.unsplash.com/photo-1592085156079-6926b5e08b5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',

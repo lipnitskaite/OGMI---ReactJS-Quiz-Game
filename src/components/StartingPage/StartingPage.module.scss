@@ -4,9 +4,9 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  justify-content: center;
   width: 100%;
   max-width: 660px;
+  min-height: 810px;
 }
 
 .subtitle {
@@ -27,6 +27,14 @@
   gap: 30px;
 }
 
+.difficultyContainer {
+  display: none;
+
+  &_visible {
+    display: block;
+  }
+}
+
 .difficulty {
   margin: 0;
   padding: 0;
@@ -38,6 +46,7 @@
 }
 
 .button {
+  display: none;
   box-sizing: border-box;
   border: none;
   width: 100%;
@@ -51,10 +60,14 @@
   font-weight: 700;
   list-style: none;
   margin: 0;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all .3s ease-in;
+
+  &_visible {
+    display: flex;
+  }
 
   &:hover {
     cursor: pointer;

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  selectedCategory: '',
-  selectedDifficultyLevel: '',
+  selectedCategory: {},
+  selectedDifficultyLevel: {},
   activeQuestion: 0,
   selectedAnswer: '',
   result: 0,
