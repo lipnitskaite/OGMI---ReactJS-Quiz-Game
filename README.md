@@ -1,4 +1,4 @@
-# OGMI Test Case - Quiz Game
+# Quiz Game
 
 ## How to use
 
@@ -6,10 +6,10 @@ Clone down this repository. You will need **npm** installed globally on your mac
 
 ```
 # to clone down the repository
-$ git clone https://github.com/lipnitskaite/OGMI_ReactJS-Quiz-Game.git
+$ git clone https://github.com/lipnitskaite/ReactJS-Quiz-Game.git
 
 # to open the target directory
-$ cd OGMI_ReactJS-Quiz-Game
+$ cd ReactJS-Quiz-Game
 ```
 
 ### Installation
